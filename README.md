@@ -14,7 +14,7 @@ and its logo on **the file system** at the following address :
 
 ## Build
 
-**Shell** can be built using the [makefile](Shell/make/makefile) file on the 
+**Shell** can be built using the [makefile](Shell/Make/makefile) file on the 
 repository.
 
 The variable **TOOLCHAIN_PATH** must be updated with the path of the ARM

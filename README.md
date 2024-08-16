@@ -44,6 +44,6 @@ Mk is free software; It is distributed in the hope that it will be useful.
 There is NO warranty; not even for MERCHANTABILITY or 
 FITNESS FOR A PARTICULAR PURPOSE.
 
-The content of this repository is bound by the [BSD-3-Clause](LICENSE.txt) license.
+The content of this repository is bound by the [BSD-3-Clause](LICENSE) license.
 
 

@@ -10,7 +10,7 @@ Type **help** to display all available commands :
 
 To run **Shell**, build the application and place the executable file (**.elf**) 
 and its logo on **the file system** at the following address : 
-[mk/apps/shell/](https://github.com/MkSoft-MacLewis/Mk/tree/main/Mk/Storage/mk/apps/shell)
+[mk/apps/shell/](https://github.com/EmbSoft3/Mk/tree/main/Mk/Storage/mk/apps/shell)
 
 ## Build
 
@@ -20,7 +20,7 @@ repository.
 The variable **TOOLCHAIN_PATH** must be updated with the path of the ARM
 toolchain.
 The variable **INCLUDES_API_PATH** must be updated with the 
-[include path](https://github.com/MkSoft-MacLewis/Mk/tree/main/Mk/Includes) of 
+[include path](https://github.com/EmbSoft3/Mk/tree/main/Mk/Includes) of 
 the **Mk** operating system.
 
 First, issue a **make clean** command then build the target with **make all**.

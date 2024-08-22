@@ -2,7 +2,7 @@
 *
 * @copyright Copyright (C) 2024 RENARD Mathieu. All rights reserved.
 *
-* This file is part of mk.
+* This file is part of Mk.
 *
 * Mk is free software. Redistribution and use in source and binary forms, with or
 * without modification, are permitted provided that the following conditions are
@@ -190,7 +190,7 @@ static T_mkCode mk_shellApplication_setContainer ( T_mkShellApplication* p_shell
    T_mkCode l_result = K_MK_OK;
 
    /* Initialisation d'un container */
-   l_result = mk_container_create ( &p_shell->container, mk_shellApplication_listenApplication, K_MK_NULL );
+   l_result = mk_container_create ( &p_shell->container, 0, mk_shellApplication_listenApplication, K_MK_NULL );
 
    /* Si aucune erreur ne s'est produite */
    if ( l_result == K_MK_OK )

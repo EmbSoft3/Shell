@@ -2,7 +2,7 @@
 *
 * @copyright Copyright (C) 2024 RENARD Mathieu. All rights reserved.
 *
-* This file is part of mk.
+* This file is part of Mk.
 *
 * Mk is free software. Redistribution and use in source and binary forms, with or
 * without modification, are permitted provided that the following conditions are

@@ -62,7 +62,7 @@ RM  := @rm -rf
 # Artefacts
 ################################################################################
 
-BUILD_ARTIFACT_NAME := Shell
+BUILD_ARTIFACT_NAME := shellRelease
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 

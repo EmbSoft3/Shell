@@ -2,7 +2,7 @@
 *
 * @copyright Copyright (C) 2024 RENARD Mathieu. All rights reserved.
 *
-* This file is part of mk.
+* This file is part of Mk.
 *
 * Mk is free software. Redistribution and use in source and binary forms, with or
 * without modification, are permitted provided that the following conditions are
@@ -103,7 +103,7 @@ K_MK_SECTION_DESCRIPTOR T_mkApplicationDynamicHeader g_mkApplicationDynamicHeade
    {
       ( T_str8 ) "Shell",                                      /* Nom de l'application. */
       ( T_str8 ) "Mac Lewis",                                  /* Auteur de l'application. */
-      ( T_str8 ) "V1.0",                                       /* Version de l'application. */
+      ( T_str8 ) "V1.1",                                       /* Version de l'application. */
       ( T_str8 ) "Command line interface (CLI).",              /* Description de l'application. */
       ( T_str8 ) "mk_shell.bmp",                               /* Chemin relatif vers l'icône de l'application. */
       K_MK_NULL                                                /* Adresse d'un bitmap */

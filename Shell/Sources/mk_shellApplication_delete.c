@@ -37,6 +37,7 @@
 #include "mk.h"
 #include "mk_shell_constants.h"
 #include "mk_shell_types.h"
+#include "mk_shell_private.h"
 #include "mk_shellApplication_constants.h"
 #include "mk_shellApplication_types.h"
 #include "mk_shellApplication_data.h"
@@ -55,6 +56,9 @@ T_mkCode mk_shellApplication_delete ( T_mkShellApplication* p_shell )
 
    /* Désallocation de la boite de messages */
    l_result = mk_mail_delete ( g_mkShellApplicationMessageArea.mail );
+
+   /* Désallocation des ressources allouées par le shell */
+   l_result |= mk_shell_delete ( &p_shell->shell );
 
    /* Destruction des ressources allouées par la console */
    l_result |= mk_console_delete ( &p_shell->console );

@@ -1,49 +1,93 @@
 # Shell
 
-**Shell** is a Command Line Interface (**CLI**) developed for the **Mk** 
-operating system.
-**Shell** is used to execute internal or external operating system commands.
+**Shell** is a Command Line Interface (CLI) application for the [Mk](https://github.com/EmbSoft3/Mk)
+operating system. It supports both built-in commands and externally loaded commands, and
+serves as a reference example for writing Mk applications.
 
-Type **help** to display all available commands :
+![shell](Screenshots/screenshot_shell.bmp)
 
-![shell](Screenshots/screenshot_shell.bmp "shell")
+---
 
-To run **Shell**, build the application and place the executable file (**.elf**) 
-and its logo on **the file system** at the following address : 
-[mk/apps/shell/](https://github.com/EmbSoft3/Mk/tree/main/Mk/Storage/mk/apps/shell)
+## Commands
+
+Type `help` in the shell to display all available commands.
+
+| Command | Description |
+|---------|-------------|
+| `ls` | List directory contents |
+| `cd` | Change current directory |
+| `pwd` | Print working directory |
+| `lsdsk` | List mounted disks and partitions |
+| `launch` | Load and run an external `.elf` application |
+| `install` / `uninstall` | Install or remove an application |
+| `terminate` | Stop a running application |
+| `getapps` | List installed applications |
+
+---
+
+## Installation
+
+Build the application (see [Build](#build) below), then copy `shellRelease.elf` and its
+icon `mk_shell.bmp` to the Mk file system at:
+
+```
+mk/apps/shell/
+```
+
+This path corresponds to [`Mk/Storage/mk/apps/shell/`](https://github.com/EmbSoft3/Mk/tree/main/Mk/Storage/mk/apps/shell)
+in the Mk repository. Once installed, Shell appears in the Mk home screen application list.
+
+---
 
 ## Build
 
-**Shell** can be built using the [makefile](Shell/Make/makefile) file on the 
-repository.
+### Requirements
 
-The variable **TOOLCHAIN_PATH** must be updated with the path of the ARM
-toolchain.
-The variable **INCLUDES_API_PATH** must be updated with the 
-[include path](https://github.com/EmbSoft3/Mk/tree/main/Mk/Includes) of 
-the **Mk** operating system.
+- [GNU Arm Embedded Toolchain 10.3-2021.10](https://developer.arm.com/downloads/-/gnu-rm)
+- GNU Make 4.x
+- [Mk Includes](https://github.com/EmbSoft3/Mk/tree/main/Mk/Includes)
 
-First, issue a **make clean** command then build the target with **make all**.
+### Steps
 
-Currently versions of compiler used are the followings:
+1. Open `Shell/Make/makefile` and set:
+   - `TOOLCHAIN_PATH` — path to your ARM toolchain `bin/` directory
+   - `INCLUDES_API_PATH` — path to the Mk [`Includes/`](https://github.com/EmbSoft3/Mk/tree/main/Mk/Includes) directory
 
-- **gcc** arm-none-eabi-gcc (GNU Arm Embedded Toolchain 10.3-2021.10) 10.3.1 
-  20210824 (release)
-- **g++** arm-none-eabi-g++ (GNU Arm Embedded Toolchain 10.3-2021.10) 10.3.1 
-  20210824 (release)
-- **make** GNU Make 4.4.1 Built for Windows32
+2. Build:
 
-Please note, that by default, the application is compiled in release mode with 
-optimizations enabled (**-Ofast**).
+```
+make clean
+make all
+```
+
+This produces `shellRelease.elf`, ready to install on the target.
+
+> Use the `Debug` target for a `-O0` build with full debug symbols:
+> ```
+> make Debug
+> ```
+
+### Compiler versions
+
+| Tool | Version |
+|------|---------|
+| `arm-none-eabi-gcc` | 10.3.1 20210824 (GNU Arm Embedded Toolchain 10.3-2021.10) |
+| `arm-none-eabi-g++` | 10.3.1 20210824 (GNU Arm Embedded Toolchain 10.3-2021.10) |
+| `make` | GNU Make 4.4.1 (Windows32) |
+
+---
+
+## Writing your own application
+
+Shell is the reference example for the Mk application model. For a step-by-step guide
+on how to structure your own Mk application — descriptor, entry point, event listeners,
+memory layout — see the [Mk wiki](https://github.com/EmbSoft3/Mk/wiki/Writing-Your-First-Application).
+
+---
 
 ## License
 
-**Copyright (C)** 2024 **RENARD Mathieu**. All rights reserved.
+Copyright © 2024 **Mathieu Renard**. All rights reserved.
 
-Mk is free software; It is distributed in the hope that it will be useful.
-There is NO warranty; not even for MERCHANTABILITY or 
-FITNESS FOR A PARTICULAR PURPOSE.
-
-The content of this repository is bound by the [BSD-3-Clause](LICENSE) license.
-
-
+This project is licensed under the **BSD 3-Clause License** — see the
+[LICENSE](LICENSE) file for details.

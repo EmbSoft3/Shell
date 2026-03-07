@@ -67,6 +67,8 @@ This produces `shellRelease.elf`, ready to install on the target.
 > make Debug
 > ```
 
+The application is compiled as a position-independent shared object (`-fPIC -shared`) and is relocatable into any 64 KB SDRAM page by the Mk dynamic loader.
+
 ### Compiler versions
 
 | Tool | Version |

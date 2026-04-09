@@ -15,7 +15,7 @@
         "set mem inaccessible-by-default off",
         "add-symbol-file ./build/debug-shell/shell.elf -o 0xc044C000"
       ],
-      "runToEntryPoint": "main"
+      "runToEntryPoint": "mk_shellApplication_main"
     },
     {
       "name": "Debug Shell (EVAL2)",
@@ -29,9 +29,9 @@
       "loadFiles": [],
       "postLaunchCommands": [
         "set mem inaccessible-by-default off",
-        "add-symbol-file ./build/debug-shell/shell.elf -o 0xc044C000"
+        "add-symbol-file ./build/debug-shell/shell.elf -o 0xc13C0000"
       ],
-      "runToEntryPoint": "main"
+      "runToEntryPoint": "mk_shellApplication_main"
     }
   ]
 }

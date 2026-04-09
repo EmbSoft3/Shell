@@ -1,6 +1,6 @@
 /**
 *
-* @copyright Copyright (C) 2024 RENARD Mathieu. All rights reserved.
+* @copyright Copyright (C) 2026 RENARD Mathieu. All rights reserved.
 *
 * This file is part of Mk.
 *
@@ -136,11 +136,19 @@ static void mk_shellApplication_initMemory ( T_mkShellApplication* p_shell, T_mk
 {
    /* Configuration des pointeurs mémoires */
    /* Attention à la taille de la page mémoire */
-   /* Taille = 1 228 800 octets */
-   /* Taille cache = 1 096 976 */
+
+   /* Résolution 640 x 480pxl (1 228 800 octets) */
+   /* Taille cache = 1 094 460 */
    /* Taille buffer fenêtre : 16384 */
    /* Taille buffer prompt : 16384 */
-   /* Reste : 99 056 octets */
+   /* Reste : 101 572 octets */
+
+   /* Résolution 480 x 272 pxl (522 240 octets) */
+   /* Taille cache = 425 852 */
+   /* Taille buffer fenêtre : 16 384 */
+   /* Taille buffer prompt : 16 384 */
+   /* Reste : 63 620 octets */
+
    p_shell->memory.promptCache = K_MK_NULL;
    p_shell->memory.windowCache = ( uint8_t* ) p_application->page.gfxAddr;
    p_shell->memory.windowAddr = ( uint8_t* ) p_shell->memory.windowCache + K_MK_SHELL_APPLICATION_CONSOLE_CACHE_SIZE;

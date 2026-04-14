@@ -30,7 +30,7 @@ For the complete list of commands and their usage, refer to the [Shell and Comma
 
 ## Installation
 
-Build the application (see [Build](#build) below), then copy `shellRelease.elf` and its
+Build the application (see [Build](#build) below), then copy `shell.elf` and its
 icon `mk_shell.bmp` to the Mk file system at:
 
 ```
@@ -124,7 +124,7 @@ Shell is linked as a PIC shared object with a base address of `0x0`. At runtime,
 dynamic loader allocates one or more 64 KB memory pages and copies the application image into
 them. The effective load address therefore depends on which memory page the loader selected.
 
-To find the load address of a running BlinkLed instance, inspect the Mk allocator state in the
+To find the load address of a running Shell instance, inspect the Mk allocator state in the
 debugger to retrieve the base address returned to the application. This address is the value to
 pass to GDB as the symbol offset.
 
@@ -149,7 +149,7 @@ memory layout — see the [Mk wiki](https://github.com/EmbSoft3/Mk/wiki/Writing%
 
 ## License
 
-Copyright © 2024 **Mathieu Renard**. All rights reserved.
+Copyright © 2024-2026 **Mathieu Renard**. All rights reserved.
 
 This project is licensed under the **BSD 3-Clause License** — see the
 [LICENSE](LICENSE) file for details.

@@ -24,7 +24,7 @@ Type `help` in the shell to display all available commands.
 | `terminate` | Stop a running application |
 | `getapps` | List installed applications |
 
-For the complete list of commands and their usage, refer to the [Shell and Commands](https://github.com/EmbSoft3/Mk/wiki/Shell-and-Commands) wiki page.
+For the complete list of commands and their usage, refer to the [Shell and Commands](https://github.com/EmbSoft3/Mk/docs/Shell-and-Commands) wiki page.
 
 ---
 
@@ -143,7 +143,7 @@ load address using `add-symbol-file`.
 
 Shell is the reference example for the Mk application model. For a step-by-step guide
 on how to structure your own Mk application — descriptor, entry point, event listeners,
-memory layout — see the [Mk wiki](https://github.com/EmbSoft3/Mk/wiki/Writing%E2%80%90Your%E2%80%90First%E2%80%90Application).
+memory layout — see the [Mk wiki](https://github.com/EmbSoft3/Mk/docs/Writing-Your-First-Application).
 
 ---
 
